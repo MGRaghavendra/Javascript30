@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #018ded;
+  background-image: url("https://unsplash.it/1500/1000?image=881&blur=5");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clock {
+  height: 250px;
+  width: 250px;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  background-color: #000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.hand {
+  position: absolute;
+  background-color: #000;
+  border-radius: 8px;
+  top: 50%;
+  right: 50%;
+  transform-origin: right;
+  transform: rotate(90deg);
+  transition: all 0.01s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour {
+  width: 35%;
+  height: 6px;
+}
+.min {
+  width: 40%;
+  height: 4px;
+}
+.sec {
+  width: 45%;
+  height: 2px;
+}
